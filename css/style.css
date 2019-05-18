@@ -1,0 +1,147 @@
+
+.welford{
+	background-color: white;
+    font-family: serif;
+}
+
+.col-sm-8 {
+    width: 100%;
+} 
+
+.content{
+    border: 500px 600px;
+}
+
+h1{
+    text-align: center;
+    font-size: 15px;
+}
+
+h2{
+    text-align: center;
+    font-family: cursive;
+}
+
+h3{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    color: grey;
+}
+
+h4{
+    text-align: center;
+    font-family: cursive;
+    font-size: 13px;
+}
+
+
+p{
+    text-align: center;
+    font-family: cursive;
+}
+
+.new{
+    font-family: sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+.tc0{
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+}
+
+.tc1{
+    color:#9ea895;
+}
+
+.tc2{
+    color: DodgerBlue;
+}
+
+.p1{
+    text-align: center;
+    font-family: cursive;
+}
+
+.nav-justified li
+    text-align: center;
+    font-size: 10px;
+}
+
+.service1{
+    padding-left: 100px;
+    text-align: center;
+    font-family: initial;
+} 
+
+.service2{
+    padding-right: 75px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    text-align: center;
+    font-family: serif;
+    padding: 94px 0px;
+    background-color: #a1b9b7;
+    background-size: 500px 600px;
+} 
+
+.image{
+    text-align: center;
+}
+
+
+.glyphicon{
+    text-align: center;
+    display: flow-root;
+    font-size: 20px;
+}
+
+.absolute-text {
+    position: absolute;
+    left: 100px;
+    bottom: 0%;
+    border-style: double;
+    border-color: #d0cdcd;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: cursive;
+    color: #c3bfbf;
+    width: 65%;
+}
+
+
+.absolute-text1{
+    position: absolute;
+    text-align: center;
+    left: 100px;
+    bottom: 0%;
+    color: #c3bfbf;
+    width: 65%;
+}
+
+
+
+@media(max-width:700px){
+  .student-search .input-group {
+   margin: 0 auto;
+   width: 85%;
+   float: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
