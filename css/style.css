@@ -1,139 +1,541 @@
-
-.welford{
-	background-color: white;
-    font-family: serif;
+/*--Fonts include starts--*/
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../fonts/nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: normal;
 }
 
-.col-sm-8 {
-    width: 100%;
-} 
-
-.content{
-    border: 500px 600px;
+@font-face {
+  font-family: "Nunito-Black";
+  src: url("../fonts/nunito/Nunito-Black.ttf") format("truetype");
+  font-weight: normal;
 }
 
-h1{
-    text-align: center;
-    font-size: 15px;
+@font-face {
+  font-family: "Nunito-BlackItalic";
+  src: url("../fonts/nunito/Nunito-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
 }
 
-h2{
-    text-align: center;
-    font-family: cursive;
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: normal;
 }
 
-h3{
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 10px;
-    color: grey;
+@font-face {
+  font-family: "Nunito-BoldItalic";
+  src: url("../fonts/nunito/Nunito-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
 }
 
-h4{
-    text-align: center;
-    font-family: cursive;
-    font-size: 13px;
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("../fonts/nunito/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
 }
 
+@font-face {
+  font-family: "Nunito-ExtraBoldItalic";
+  src: url("../fonts/nunito/Nunito-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+}
 
+@font-face {
+  font-family: "Nunito-ExtraLight";
+  src: url("../fonts/nunito/Nunito-ExtraLight.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Italic";
+  src: url("../fonts/nunito/Nunito-Italic.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/nunito/Nunito-Light.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraLightItalic";
+  src: url("../fonts/nunito/Nunito-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../fonts/nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url("../fonts/nunito/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito-SemiBoldItalic";
+  src: url("../fonts/nunito/Nunito-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+}
+/*--Fonts include ends--*/
+
+html,body{
+	background:#fff;
+	font-size: 16px;
+	font-family: "Nunito-Regular";
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Nunito-Bold";
+	font-weight:normal;
+}
+
+h1,h2,h3,h4,h5,h6,label,p{
+	margin:0;	
+}
+b,
+strong {
+  font-family: "Nunito-Bold";
+  font-weight: normal;
+}
+ul, ol {
+	font-family: "Nunito-Regular";
+}
+a{
+	outline: none !important;
+	text-decoration: none !important;
+}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  /*--Drag--*/
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 p{
-    text-align: center;
-    font-family: cursive;
+	color: #979797;
 }
 
-.new{
-    font-family: sans-serif;
-    font-size: 100px;
-    text-align: center;
+/*header starts here*/
+.header{
+	width:100%;
+	float:left;
+	padding: 10px 0;
+	border-bottom: 1px solid #e9e9e9;
+}
+.header h1{
+	text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+	font-size: 17px;
 }
 
-.tc0{
+/*Navigations starts here*/
+.header ul.navigation{
+	list-style: none;
+    margin: 0 auto;
+    display: inline-block;
     text-align: center;
-    font-family: cursive;
-    font-size: 50px;
+    width: 100%;
+    margin-top: 23px;
+	padding:0;
+}
+.header ul.navigation li{
+	display: inline-block;
+}
+.header ul.navigation li:first-child{
+	float:left;
+}
+.header ul.navigation li:last-child{
+	float:right;
+}
+.header ul.navigation li a{
+	font-size: 15px;
+	font-family: "Nunito-SemiBold";
+    color: #000;
+	padding: 10px 18px;
+    display: block;
+    text-transform: uppercase;
+}
+/*Navigations ends here*/
+
+/*header ends here*/
+
+/*mobile-navigation starts here*/
+.mobile-navigation{
+	width:100%;
+	float:left;
+	display: none;
+	margin-top:20px;
+}
+.mobile-navigation .left,
+.mobile-navigation .right{
+	width:50%;
+}
+.mobile-navigation .right{
+	float:right;
+	text-align: right;
+}
+.mobile-navigation .right button{
+	background: none;
+	border:0;
+	color: #000;
+	outline: none;
+	font-size: 18px;
+}
+.mobile-navigation .right button i{
+	
 }
 
-.tc1{
-    color:#9ea895;
+.mobile-navigation .left{
+	float:left;
 }
-
-.tc2{
-    color: DodgerBlue;
+.mobile-navigation .left a{
+	font-size: 18px;
+	font-family: "Nunito-SemiBold";
+    color: #000;
+	padding: 0 7px;
+    display: inline-block;
+    text-transform: uppercase;
+	
 }
+/*mobile-navigation ends here*/
 
-.p1{
-    text-align: center;
-    font-family: cursive;
+
+
+/*welford-range starts here*/
+.welford-range{
+	width:100%;
+	float:left;
+	padding: 20px 0;
 }
-
-.nav-justified li
-    text-align: center;
-    font-size: 10px;
+.welford-range .content{
+	width:100%;
+	display: block;
+ 	min-height: 605px;
 }
-
-.service1{
-    padding-left: 100px;
+.welford-range .content img{
+	max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 605px;
+}
+.welford-range .col-sm-6:nth-child(2) .content{
     text-align: center;
-    font-family: initial;
-} 
-
-.service2{
-    padding-right: 75px;
-    margin-bottom: 50px;
-    margin-top: 0px;
-    text-align: center;
-    font-family: serif;
-    padding: 94px 0px;
     background-color: #a1b9b7;
-    background-size: 500px 600px;
+	display: table;
+}
+.welford-range .col-sm-6:nth-child(2) .content .details{
+	display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+}
+.welford-range .col-sm-6:nth-child(2) .content .details h3{
+	font-family: "Nunito-ExtraLightItalic";
+	color: #fff;
+	margin-bottom: 10px;
+}
+.welford-range .col-sm-6:nth-child(2) .content .details h2{
+	font-family: "Nunito-Light";
+	font-size: 73px;
+    color: #fff;
+    letter-spacing: 10px;
+    line-height: 103%;
+	position: relative;
+	
+}
+.welford-range .col-sm-6:nth-child(2) .content .details h2:after{
+	content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 45%;
+    width: 40px;
+    height: 2px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+/*welford-range ends here*/
+
+/*welford-sales starts here*/
+.welford-sales{
+	width:100%;
+	float:left;
+	padding:20px 0;
+}
+.welford-sales .list{
+	width:100%;
+	float:left;
+	display: block;
+	position: relative;
+}
+.welford-sales .list img{
+	display: block;
+	max-width:100%;
+	height: auto;
+	width: 100%;
+	margin:0 auto;
+}
+.welford-sales .list .sales-content{
+	width: 80%;
+    position: absolute;
+    bottom: 22px;
+    padding: 5px;
+    background: #fff;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.welford-sales .list .sales-details{
+	width:100%;
+	float:left;
+	border: 1px solid #e9e9e9;
+	padding: 20px;
+}
+.welford-sales .list .sales-details span{
+	color: #9ab4b3;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.welford-sales .list .sales-details p{
+	color: #979797;
+	line-height: 150%;
+}
+/*welford-sales ends here*/
+
+/*favourite-products starts here*/
+.favourite-products{
+	width: 100%;
+    float: left;
+    padding: 60px 0;
+}
+.favourite-products .heading{
+	width:100%;
+	display: block;
+	text-align: center;
+	margin-bottom:30px;
+}
+.favourite-products .heading h2{
+	text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: "Nunito-SemiBold";
+    font-size: 24px;
+}
+.favourite-products .heading p{
+	font-family: "Nunito-Italic";
+}
+/*--Products starts here--*/
+.favourite-products .products{
+	width:100%;
+	float:left;
+	display: block;
+	text-align: center;
+}
+.favourite-products .products img{
+	max-width:100%;
+	width:100%;
+	display: block;
+	margin:0 auto;
+}
+.favourite-products .products h3{
+	color: #000;
+	font-size: 16px;
+	margin-top: 23px;
+	margin-bottom: 13px;
+}
+.favourite-products .products a{
+	text-decoration: none;
+	outline: none;
+}
+.favourite-products .products p{
+
+}
+.favourite-products .products p del{
+	margin-right: 10px;
+}
+.favourite-products .products span{
+	color: #aac7e4;
+}
+/*--Products ends here--*/
+
+/*favourite-products ends here*/
+
+/*quick-links starts here*/
+.quick-links{
+	width:100%;
+	float:left;
+	padding: 6px 0;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;	
+}
+.quick-links ul{
+	list-style: none;
+	text-align: center;
+	margin:0 auto;
+}
+.quick-links ul li{
+	display: inline-block;
+	text-transform: uppercase;
+	
+}
+.quick-links ul li a{
+	padding: 7px 26px;
+    font-size: 16px;
+    color: #a6a6a6;
+    display: block;
+}
+.quick-links ul li a:hover{
+	color: #000;
+}
+/*quick-links ends here*/
+
+/*footer starts here*/
+.footer{
+	width:100%;
+	float:left;
+	display: block;
+	text-align: center;
+	padding: 60px 0 90px 0;
+}
+.footer .social-icons{
+	width:100%;
+	margin-bottom:30px;
+}
+.footer .social-icons a{
+	display: inline-block;
+	color: #9ab4b3;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 7px;
+}
+.footer .copyright-text{
+	width:100%;
+}
+.footer .copyright-text h4{
+	color: #898484;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-family: "Nunito-Regular";
+}
+.footer .copyright-text p{
+	color: #000;
+	font-family: "Nunito-Italic";
+}
+/*footer ends here*/
+
+
+/*--Responsive starts here--*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (max-width: 1200px) {
+ 	.favourite-products .products{
+		margin-bottom: 33px;
+	}
+	.favourite-products .col-sm-6:last-child .products{
+		margin-bottom: 0;
+	}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+	.mobile-navigation{
+		display: block;
+	}
+	.header ul.navigation{
+		width: 100%;
+		float:left;
+		background: #a1b9b7;
+		padding: 20px;
+		
+ 		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 99;
+		height: 100vh;
+		margin-top: 0;
+	}
+	.header ul.navigation,
+	.header ul.navigation li:first-child,
+	.header ul.navigation li:last-child{
+		display: none;
+	}
+	.header ul.navigation li,
+	.header ul.navigation li a{
+		width:100%;
+	}	
+	.header ul.navigation li a{
+		border-bottom: 1px solid #c1cccb;
+		color: #fff;
+		font-size: 25px;
+	}
+	.header ul.navigation li:last-child a{
+		border-bottom:0;
+	}
+	.welford-sales .list{
+		margin-bottom:20px;
+	}
+	.welford-sales .col-sm-6:last-child.list{
+		margin-bottom: 0;
+	}
+	.welford-range .col-sm-6:nth-child(2) .content .details h2{
+		font-size: 45px;
+	}
+	.welford-range .content img {
+ 		height: 500px;
+	}
+	.welford-range .content {
+ 		min-height: 500px;
+	}
 } 
 
-.image{
-    text-align: center;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	.welford-range .content img{
+	    height: 490px;
 }
+	.welford-range .col-sm-6:last-child .content {
+ 		min-height: 400px;
+		margin-top:20px;
+	}
+	.favourite-products .col-sm-6,
+	.welford-sales .col-sm-6{
+		width: 50%;
+		float: left;
+	}
+} 
 
+ 
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+	.favourite-products .col-sm-6,
+	.welford-sales .col-sm-6{
+		width: 100%;
+		float: left;
+	}
+} 
 
-.glyphicon{
-    text-align: center;
-    display: flow-root;
-    font-size: 20px;
+@media only screen and (max-width: 360px) {
+	
 }
-
-.absolute-text {
-    position: absolute;
-    left: 100px;
-    bottom: 0%;
-    border-style: double;
-    border-color: #d0cdcd;
-    background-color: white;
-    font-size: 30px;
-    text-align: center;
-    font-family: cursive;
-    color: #c3bfbf;
-    width: 65%;
-}
-
-
-.absolute-text1{
-    position: absolute;
-    text-align: center;
-    left: 100px;
-    bottom: 0%;
-    color: #c3bfbf;
-    width: 65%;
-}
-
-
-
-@media(max-width:700px){
-  .student-search .input-group {
-   margin: 0 auto;
-   width: 85%;
-   float: none;
-}
-
-
-
+/*--Responsive ends here--*/
 
 
 
